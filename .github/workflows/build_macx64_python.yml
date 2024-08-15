@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
     - uses: maxim-lobanov/setup-xcode@v1
@@ -24,9 +24,9 @@ jobs:
         brew update
         brew install bash libtool automake
 
-        wget https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tar.xz
-        tar xvf Python-3.12.2.tar.xz
-        cd Python-3.12.2
+        wget https://www.python.org/ftp/python/3.12.5/Python-3.12.5.tar.xz
+        tar xvf Python-3.12.5.tar.xz
+        cd Python-3.12.5
 
         # Allow relative prefixes
         grep -v "expected an absolute directory name" configure > configure.patched
